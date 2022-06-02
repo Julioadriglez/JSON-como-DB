@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public'))); //le dice a express don
 
 // 404 handler
 app.use((req, res, next) => { //esto es por si pasa todo el codigo y no encuentra lo que busca mandara el error 
-    res.send('404 Not found');
+    res.status(404).send('404 Not found'); // 404 archivo no encontrado
 })
 
 module.exports = app;
