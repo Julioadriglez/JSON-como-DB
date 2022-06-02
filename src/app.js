@@ -5,7 +5,7 @@ const path = require('path') //el modulo path nos permite concatenar directorios
 //Configuración (Settings)
 app.set('port', 5000);
 app.set('views', path.join(__dirname, 'views'));//Le idce a express donde se encuentra views
-
+app.set('views engine', 'ejs'); //Se establece el motor de plantilas
 
 //Middleware
 
