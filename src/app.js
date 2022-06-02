@@ -12,9 +12,16 @@ app.set('views engine', 'ejs'); //Se establece el motor de plantilas
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false})); //esta linea entiende los datos que vienen de los formularios y convertirlo en un formato json para utilizarlos
 
-
 //Routes
+app.use(require('./routes/index'));
+
 
 //Static
+app.use(express.static(path.join(__dirname, 'public'))); //le dice a express donde esta la carpeta public
+
+// 404 handler
+app.use((req, res, next) => { //esto es por si pasa todo el codigo y no encuentra lo que busca mandara el error 
+    res.send('404 Not found');
+})
 
 module.exports = app;
