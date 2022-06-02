@@ -1,0 +1,22 @@
+{
+  "name": "json-como-db",
+  "version": "1.0.0",
+  "description": "Nodejs, Express &amp; JSON como DB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Julioadriglez/JSON-como-DB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Julioadriglez/JSON-como-DB/issues"
+  },
+  "homepage": "https://github.com/Julioadriglez/JSON-como-DB#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
