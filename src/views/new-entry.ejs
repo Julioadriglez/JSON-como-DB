@@ -6,24 +6,28 @@
 </head>
 <body>
     <div class="container p-4">
-        <form action="" class="card card-body">
+        <form method="POST" target="/new-entry" class="card card-body"> <!--Se mandan los datos para guardarlos en la DB(.json)-->
             <div class="form-group">
                 <label for="title">title</label>
                 <input type="text" class="form-control" name="title" id="title" placeholder="Entry a new title" autofocus required>
             </div>
+            <br>
             <div class="form-group">
                 <label for="author">author</label>
                 <input type="text" class="form-control" name="author" id="author" placeholder="Author" required>
             </div>
+            <br>
             <div class="form-group">
                 <label for="image">image</label>
                 <input type="text" class="form-control" name="image" id="image" placeholder="http://website.com" required>
             </div>
+            <br>
             <div class="form-group">
                 <label for="description">Description</label>
-                <textarea class="" name="description" rows="2" id="description" required>
+                <textarea class="form-control" name="description" rows="2" id="description" required></textarea>
             </div>
-            <input type="button" value="Save Book" class="btn btn-primary" >
+            <br>
+            <input type="submit" value="Save Book" class="btn btn-primary" > <!--El boton debe de ser tipo submit para que envie los datos al servidor-->
         </form>
     </div>
 </body>
