@@ -1,5 +1,6 @@
 const { Router } = require('express');
 const router = Router();
+const fs = require('fs');
 
 const books = [];
 
@@ -26,6 +27,10 @@ router.post('/new-entry', (req, res) => { //Recibe los datos del libro
         description
     };
     books.push(newBook);
+
+    const json_books = JSON.stringify(books) // Se guardan datos en books.json
+    fs.writeFileSync('../src/books.json', json_books, 'utf-8'); //Direccion de books.json y formato en como se guarda el string
+
     res.send('received');
 });
 
