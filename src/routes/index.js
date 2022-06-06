@@ -4,7 +4,9 @@ const router = Router();
 const books = [];
 
 router.get('/', (req, res) => {
-    res.render('index.ejs'); //render manda a llamar al archivo index.ejs para mostrarlo
+    res.render('index.ejs', {
+        books
+    }); //render manda a llamar al archivo index.ejs para mostrarlo
 });
 
 router.get('/new-entry', (req, res) => {
@@ -12,18 +14,18 @@ router.get('/new-entry', (req, res) => {
 });
 
 router.post('/new-entry', (req, res) => { //Recibe los datos del libro 
-    const {title, imagen, author, description} = req.body;
-    if (title || imagen || author || description){
+    const {title, author, image, description} = req.body;
+    if(!title || !author  || !image || !description){
         res.status(400).send('Entries must have a title and description');
         return;
     }
-    let newbook = {
+    let newBook = {
         title,
-        imagen,
         author,
+        image,
         description
     };
-    books.push(req.body);
+    books.push(newBook);
     res.send('received');
 });
 
