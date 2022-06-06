@@ -1,8 +1,9 @@
 const { Router } = require('express');
 const router = Router();
 const fs = require('fs');
+const { v4: uuidv4 } = require('uuid');
 
-const json_books = fs.readFileSync('../src/books.json', 'utf-8',);// Lee el archivo .json
+const json_books = fs.readFileSync('src/books.json', 'utf-8',);// Lee el archivo .json
 const books = JSON.parse(json_books);
 
 router.get('/', (req, res) => {
@@ -22,6 +23,7 @@ router.post('/new-entry', (req, res) => { //Recibe los datos del libro
         return;
     }
     let newBook = {
+        id: uuidv4(),
         title,
         author,
         image,
@@ -30,9 +32,9 @@ router.post('/new-entry', (req, res) => { //Recibe los datos del libro
     books.push(newBook);
 
     const json_books = JSON.stringify(books) // Se guardan datos en books.json
-    fs.writeFileSync('../src/books.json', json_books, 'utf-8'); //Direccion de books.json y formato en como se guarda el string
+    fs.writeFileSync('src/books.json', json_books, 'utf-8'); //Direccion de books.json y formato en como se guarda el string
 
-    res.send('received');
+    res.redirect('/');
 });
 
 
