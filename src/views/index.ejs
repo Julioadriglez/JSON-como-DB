@@ -8,10 +8,23 @@
 
     <div class="container">
         <div class="row">
-            <% books.forEach(function (book) { %>
-                <div class="col-md-4"></div>
+            <% books.forEach(function (book) { %> <!--Para crear multiples tarjetas de cada libro que recorra-->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <%- book.title %> / <%- book.author %>
+                        </div>
+                        <div class="card-body">
+                            <p><%- book.description %></p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-danger">
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
             <% }) %>
-            
         </div>
     </div>
 
