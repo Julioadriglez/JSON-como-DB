@@ -6,6 +6,8 @@
 </head>
 <body>
 
+    <%- include("navigation") %>
+
     <div class="container">
         <div class="row">
             <% books.forEach(function (book) { %> <!--Para crear multiples tarjetas de cada libro que recorra-->
@@ -19,9 +21,9 @@
                             <p><%- book.description %></p>
                         </div>
                         <div class="card-footer">
-                            <button class="btn btn-danger">
+                            <a href="/delete/<%= book.id %>" class="btn btn-danger"> <!--ruta de para borrado por id -->
                                 Delete
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
