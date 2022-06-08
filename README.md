@@ -14,3 +14,13 @@ Esta aplicación web se guardan datos de libros con su imagen y tambien se elimi
 * `uuid`
 * `middlewere`
 * `nodemon`
+* `node.js`
+* `HTML`
+* `CSS`
+
+## Diseño
+
+![](..%5CdiagramaJsonComoDb.png)
+
+`package.json`: Contiene todo las dependencias como `Express`, `Morgan`, `Uuid`, `Middlewere` y `nodemon` que son utilidaz por el programa para su funcionamiento.
+
