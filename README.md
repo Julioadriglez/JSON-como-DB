@@ -24,4 +24,4 @@ Esta aplicación web se guardan datos de libros con su imagen y tambien se elimi
 
 
 `package.json`: Contiene todo las dependencias como `Express`, `Morgan`, `Uuid`, `Middlewere` y `nodemon` que son utilidaz por el programa para su funcionamiento.
-
+`main.css`: Encargada del fondo degradado azul de las dos vistas  web que son `index.ejs` y `new-entry.ejs`.
