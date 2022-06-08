@@ -20,7 +20,8 @@ Esta aplicación web se guardan datos de libros con su imagen y tambien se elimi
 
 ## Diseño
 
-![](..%5CdiagramaJsonComoDb.png)
+![diagramaJsonComoDb](https://user-images.githubusercontent.com/99068430/172725458-62f3c592-d181-4627-854d-a73e6744e146.png)
+
 
 `package.json`: Contiene todo las dependencias como `Express`, `Morgan`, `Uuid`, `Middlewere` y `nodemon` que son utilidaz por el programa para su funcionamiento.
 
