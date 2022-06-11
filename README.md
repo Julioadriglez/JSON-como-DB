@@ -38,4 +38,8 @@ Nota: es necesario que la página web este conectada a internet para que pueda c
 
 ![navigation ejs](https://user-images.githubusercontent.com/99068430/173170131-3a5fed30-39d0-4991-9dbd-c9f6ad98854c.png)
 
+`index.ejs`: Esta vista de html contiene los libros ingresados con sus datos y la imagen asignada. La sintaxis para incluir un parcial de EJS al  `header.ejs` y `navigation.ejs` utilizamos esta forma `<%- include("partials/header.ejs") %>` para indicar a EJS que renderice HTML sin formato.
 
+![index ejs](https://user-images.githubusercontent.com/99068430/173170581-a87959f9-91d5-4374-b804-5666b122de5e.png)
+
+La sintaxis `<% books.forEach(function (book) { %>` con esta función crear múltiples tarjetas de cada libro que recorra, aquí ` <%- book.title %> / <%- book.author %>` se filtra el titulo y el autor, `<%- book.image %>` de igual forma se filtra aquí la imagen, `<%- book.description %>` se filtra la descripción del libro y finalmente al final de cada carta contiene un botón `Delete` que elimina el libro seleccionado por medio del `id` con la siguiente sintaxis `/delete/<%= book.id %>`.
