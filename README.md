@@ -43,3 +43,9 @@ Nota: es necesario que la página web este conectada a internet para que pueda c
 ![index ejs](https://user-images.githubusercontent.com/99068430/173170581-a87959f9-91d5-4374-b804-5666b122de5e.png)
 
 La sintaxis `<% books.forEach(function (book) { %>` con esta función crear múltiples tarjetas de cada libro que recorra, aquí ` <%- book.title %> / <%- book.author %>` se filtra el titulo y el autor, `<%- book.image %>` de igual forma se filtra aquí la imagen, `<%- book.description %>` se filtra la descripción del libro y finalmente al final de cada carta contiene un botón `Delete` que elimina el libro seleccionado por medio del `id` con la siguiente sintaxis `/delete/<%= book.id %>`.
+
+`new-entry.ejs`: En esta vista de html se introducen los datos de cada libro los cuales contienen `id` este es introducido automáticamente y aleatoriamente por la dependencia  `uuid`, `titulo`, `autor`, `imagen` solo admite la dirección web de la imagen para no hacer tan pesada la base de datos `books.json` y finalmente la `descripción` en este pedazo de código `method="POST" target="/new-entry"` se mandan los datos para guardarlos en la db. 
+Por último el botón debe de ser tipo `submit` para que envié los datos al servidor.
+
+![newEntry ejs](https://user-images.githubusercontent.com/99068430/173171273-68bdc67e-eb0f-4005-a35f-78e5fed28db4.png)
+
