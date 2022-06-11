@@ -69,5 +69,18 @@ Por último el botón debe de ser tipo `submit` para que envié los datos al ser
   
 * `http://localhost:5000/delete/:id`: este endpoint está en el botón de `Delete` en la vista de book al presionarlo elimina el libro de la base de datos.
 
-`app.js`
+`app.js`: Contiene la configuración del servidor como lo es la direcion de le las carpetas `views`, `public` para que la encuentre express, el puerto a usar y eror que mostrara si no encuntra nada que es `404 Not found`.
   
+![app](https://user-images.githubusercontent.com/99068430/173206263-0ba239cb-5967-418b-a5b9-2098055da4b4.png)
+
+`index.js`: Muestra el puerto que esta usando el servidor.
+
+![puertoIndex](https://user-images.githubusercontent.com/99068430/173206507-bd5bbbac-bb7a-42cc-8042-b42f03b28c01.png)
+
+`books.json`: Es la base de datos local.
+
+![db](https://user-images.githubusercontent.com/99068430/173206574-074d5287-f819-414a-902a-7fbba9f40033.png)
+
+Este ejercicio fue tomado de [link](https://www.youtube.com/watch?v=YiBDvtEP88M&ab_channel=FaztCode)
+
+
